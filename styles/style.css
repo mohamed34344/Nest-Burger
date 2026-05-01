@@ -191,14 +191,13 @@ body {
 }
 
 .card {
-  width: 100%;
+  width: 90%;
   background: white;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
-  padding-right: 1rem;
-  margin: 1rem 0 0 0;
+  margin-left: 1rem;
 }
 
 .card:hover {
@@ -789,6 +788,9 @@ button:hover {
     font-size: 2.5rem;
   }
   /* CARDS */
+  .card {
+    margin-left: 0.5rem;
+  }
   .container1 {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -828,6 +830,9 @@ button:hover {
 /* 📱 Mobile */
 @media (max-width: 600px) {
   /* HEADER */
+  .logo {
+    margin-left: 6.5rem;
+  }
   .header .logoContent {
     margin: 1rem;
   }
@@ -835,11 +840,8 @@ button:hover {
     gap: 1rem;
     font-size: 1rem;
   }
-  .signin-btn {
-    width: 100%;
-  }
   .buttons {
-    margin-left: 5rem;
+    margin-left: 4rem;
   }
   /* HERO TEXT */
   .pargraph {
@@ -866,8 +868,11 @@ button:hover {
   .About__story__p {
     line-height: 2rem;
   }
+  .story__h2 {
+    padding-right: 2.5rem;
+  }
   .story__p {
-    padding-right: 2rem;
+    padding-right: 2.5rem;
   }
   .popular__link {
     margin-right: 2rem;
@@ -904,10 +909,10 @@ button:hover {
   .menu__h2 {
     font-size: 2.5rem;
   }
+  .card {
+    margin-left: 0.5rem;
+  }
   .about__h2 {
     font-size: 2.5rem;
   }
-}
-/* ========================= */
-/* 🔥 RESPONSIVE FIX END */
-/* ========================= *//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
