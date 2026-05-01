@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon_io (1)/favicon.ico" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <title>Nest Burger</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="logoContent">
+          <img class="logo" src="image/NESTO (1).png" alt="logo website" />
+        </div>
+        <div class="links" id="navLinks">
+          <a class="links__link" href="#home">Home</a>
+          <a class="links__link" href="menu.html">Menu</a>
+          <a class="links__link" href="About.html">About</a>
+          <a class="links__link" href="Contact.html">Contact US</a>
+          <div class="cart-icon" onclick="goToCart()">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cartCount">0</span>
+          </div>
+
+          <button class="signin-btn" onclick="goToLogin()">Sign In</button>
+
+          <script>
+            function goToLogin() {
+              window.location.href = "login.html";
+            }
+          </script>
+        </div>
+      </header>
+      <section class="text1" id="home">
+        <div class="column1">
+          <div>
+            <h1 class="pargraph">
+              The perfect burger experience starts from
+              <span class="Food"> Nest</span>
+            </h1>
+
+            <p class="desc">
+              Fresh ingredients, high quality, and a taste that will stay in
+              your mind
+            </p>
+
+            <div class="buttons">
+              <a href="menu.html" class="order">Order Now</a>
+              <a
+                href="https://www.facebook.com/share/r/18ZE9vths9/"
+                class="watch"
+                >Watch Video ▶</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="column2">
+          <div class="img-wrapper">
+            <img src="image/pic11.png" class="img-boy" />
+          </div>
+        </div>
+      </section>
+
+      <section class="popular">
+        <div class="popular__content">
+          <h2 class="popular__h2">
+            Our <span class="Food">popular</span> Dishes
+          </h2>
+          <p class="popular__p">Try our customer favorites</p>
+        </div>
+        <div class="pouplar__imag container1">
+          <div class="card">
+            <div class="image">
+              <img src="image/Screenshot 2026-04-23 194233.png" alt="" />
+              <span class="badge">Popular</span>
+            </div>
+            <div class="content">
+              <h3>DOUBLE BURGER</h3>
+              <p>2 pieces of beef + cheddar slices + Nesto sauce</p>
+              <div class="bottom">
+                <span class="price">170LE</span>
+                <button onclick="addToCart(this)">Add</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="image">
+              <img src="/image/Screenshot 2026-04-23 194124.png" alt="" />
+              <span class="badge">Popular</span>
+            </div>
+            <div class="content">
+              <h3>GOLDEN CRISPY</h3>
+              <p>
+                fresh chicken breasts + cheddar sauce + Nesto sauce + mozzarella
+                sticks
+              </p>
+              <div class="bottom">
+                <span class="price">140LE</span>
+                <button onclick="addToCart(this)">Add</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="image">
+              <img src="image/Screenshot 2026-04-23 194158.png" alt="" />
+              <span class="badge">Popular</span>
+            </div>
+            <div class="content">
+              <h3>BACON BURGER</h3>
+              <p>beef burger + beef bacon + Barbecue</p>
+              <div class="bottom">
+                <span class="price">135LE</span>
+                <button onclick="addToCart(this)">Add</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="image">
+              <img
+                src="image/Crispy Mozzarella Sticks 2026 _ Ultimate Cheese Pull Fast Food Snack Close-Up.jpg"
+                alt=""
+              />
+              <span class="badge">Popular</span>
+            </div>
+            <div class="content">
+              <h3>MOZZARELLA STICKS</h3>
+              <br />
+
+              <div class="bottom">
+                <span class="price">35LE</span>
+                <button onclick="addToCart(this)">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="View__menu">
+          <a href="order.html" class="popular__link"
+            >View Full menu <span class="arrow__menu">→</span></a
+          >
+        </div>
+      </section>
+
+      <section class="story">
+        <div class="story__content">
+          <h2 class="story__h2">Our Story</h2>
+          <p class="story__p">
+            Founded in 2019, we've been serving the community with passion and
+            dedication. Our mission is simple: create delicious food using
+            fresh, quality ingredients and deliver it with a smile.
+          </p>
+          <br />
+          <p class="story__p">
+            every dish is crafted with care and attention to detail. We believe
+            food brings people together, and we're honored to be part of your
+            special moments.
+          </p>
+
+          <a href="About.html" class="popular__link">
+            Learn More <span class="arrow">→</span></a
+          >
+        </div>
+        <div class="About__story__img">
+          <img class="story__img" src="/image/story1.png" />
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__content">
+          <!-- COL 1 -->
+          <div class="footer__col">
+            <h2>Nest Burger</h2>
+            <p>
+              Serving delicious food with love since 2019. Your satisfaction is
+              our priority.
+            </p>
+
+            <div class="social">
+              <a href="https://www.facebook.com/nestburgereg"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+
+              <a
+                href="https://www.instagram.com/nestburgereg?fbclid=IwY2xjawRetT1leHRuA2FlbQIxMABicmlkETFRQWN4d3VvRmhYd2dGQ2NJc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHhnYh9oYg4Qmd0EId7X0Z_3O1UnzCYoUSy2dfSEflBR_VuxQcuTI4bplLcEa_aem_mdWqXwZXkEq5YWrZVXVkdQ"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- COL 2 -->
+          <div class="footer__col">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="About.html">About Us</a></li>
+              <li><a href="Contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- COL 3 -->
+          <div class="footer__col">
+            <h3>Customer Service</h3>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Delivery Information</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+
+          <!-- COL 4 -->
+          <div class="footer__col4">
+            <h3>Contact Us</h3>
+            <p>
+              📍 Tala in front of Habash Pharmacy.<br />
+              Shebin, Paris Street
+            </p>
+            <p>📞 01015864098</p>
+            <p>✉ info@NEST BURGER.com</p>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p>© 2026 Nest Burger Restaurant. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      function addToCart(btn) {
+        let card = btn.closest(".card");
+
+        let name = card.querySelector("h3").innerText;
+        let priceText = card.querySelector(".price").innerText;
+        let price = parseFloat(priceText.replace("LE", "").replace("$", ""));
+        let img = card.querySelector("img").src;
+        let desc = card.querySelector("p")?.innerText || "";
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        let existing = cart.find((item) => item.name === name);
+
+        if (existing) {
+          existing.qty += 1;
+        } else {
+          cart.push({
+            name: name,
+            price: price,
+            qty: 1,
+            img: img,
+            desc: desc,
+          });
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        updateCartCount();
+        alert("Added to cart ✅");
+      }
+
+      function goToCart() {
+        window.location.href = "cart.html";
+      }
+
+      function updateCartCount() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        let count = 0;
+        cart.forEach((item) => {
+          count += item.qty;
+        });
+
+        let badge = document.getElementById("cartCount");
+
+        if (badge) {
+          badge.innerText = count;
+
+          if (count === 0) {
+            badge.style.display = "none";
+          } else {
+            badge.style.display = "block";
+          }
+        }
+      }
+
+      updateCartCount();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon_io (1)/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Nest Burger</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="logoContent">
+          <img class="logo" src="image/NESTO (1).png" alt="logo website" />
+        </div>
+        <div class="links">
+          <a class="links__link" href="index.html">Home</a>
+          <a class="links__link" href="menu.html">Menu</a>
+          <a class="links__link" href="About.html">About</a>
+          <a class="links__link" href="Contact.html">Contact US</a>
+          <div class="cart-icon" onclick="goToCart()">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cartCount">0</span>
+          </div>
+
+          <button class="signin-btn" onclick="goToLogin()">Sign In</button>
+
+          <script>
+            function goToLogin() {
+              window.location.href = "login.html";
+            }
+          </script>
+        </div>
+      </header>
+
+      <section class="about__us">
+        <div class="about__text">
+          <h2 class="about__h2">About Us</h2>
+
+          <p class="about__p">
+            Serving delicious food and creating memorable experiences since 2019
+          </p>
+        </div>
+      </section>
+      <section class="About__story">
+        <div class="About__story__content">
+          <h2 class="About__story__h2">Our Story</h2>
+          <p class="About__story__p">
+            Founded in 2019, we've been serving the community with passion and
+            dedication. Our mission is simple: create delicious food using
+            fresh, quality ingredients and deliver it with a smile.
+          </p>
+          <br />
+          <p class="About__story__p">
+            From a small idea to a place that brings together burger lovers 🍔
+            We believe that a real burger starts with fresh ingredients, skilled
+            craftsmanship, and a flavor that lingers in memory. In our
+            restaurant, every sandwich is prepared at the moment of order to
+            achieve the highest possible quality. We don't just serve a meal… we
+            offer a complete taste experience that makes you come back again.
+          </p>
+        </div>
+        <div class="About__story__num">
+          <div>
+            <h3 class="num__h3">10K+</h3>
+            <p class="num__p">Happy Customers</p>
+          </div>
+          <div>
+            <h3 class="num__h3">20+</h3>
+            <p class="num__p">Menu Items</p>
+          </div>
+          <div>
+            <h3 class="num__h3">9</h3>
+            <p class="num__p">Years in Business</p>
+          </div>
+          <div>
+            <h3 class="num__h3">5</h3>
+            <p class="num__p">Award Win</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="values">
+        <div class="container">
+          <h2 class="values__title">Our Values</h2>
+          <p class="values__subtitle">What drives us every day</p>
+
+          <div class="values__cards">
+            <div class="card__About">
+              <div class="card__icon">🏅</div>
+              <h3>Quality</h3>
+              <p>
+                We never compromise on the quality of our ingredients or our
+                service
+              </p>
+            </div>
+
+            <div class="card__About">
+              <div class="card__icon">👥</div>
+              <h3>Community</h3>
+              <p>
+                We're proud to be part of this community and support local
+                businesses
+              </p>
+            </div>
+
+            <div class="card__About">
+              <div class="card__icon">❤️</div>
+              <h3>Passion</h3>
+              <p>
+                Every dish is made with love and a genuine passion for great
+                food
+              </p>
+            </div>
+
+            <div class="card__About">
+              <div class="card__icon">📈</div>
+              <h3>Innovation</h3>
+              <p>
+                We're always exploring new flavors and improving our recipes
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__content">
+          <!-- COL 1 -->
+          <div class="footer__col">
+            <h2>Nest Burger</h2>
+            <p>
+              Serving delicious food with love since 2019. Your satisfaction is
+              our priority.
+            </p>
+
+            <div class="social">
+              <a href="https://www.facebook.com/nestburgereg"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+
+              <a
+                href="https://www.instagram.com/nestburgereg?fbclid=IwY2xjawRetT1leHRuA2FlbQIxMABicmlkETFRQWN4d3VvRmhYd2dGQ2NJc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHhnYh9oYg4Qmd0EId7X0Z_3O1UnzCYoUSy2dfSEflBR_VuxQcuTI4bplLcEa_aem_mdWqXwZXkEq5YWrZVXVkdQ"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- COL 2 -->
+          <div class="footer__col">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="About.html">About Us</a></li>
+              <li><a href="Contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- COL 3 -->
+          <div class="footer__col">
+            <h3>Customer Service</h3>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Delivery Information</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+
+          <!-- COL 4 -->
+          <div class="footer__col4">
+            <h3>Contact Us</h3>
+            <p>
+              📍 Tala in front of Habash Pharmacy.<br />
+              Shebin, Paris Street
+            </p>
+            <p>📞 01015864098</p>
+            <p>✉ info@NEST BURGER.com</p>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p>© 2026 Nest Burger Restaurant. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+    <script>
+      function updateCartCount() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        let count = 0;
+        cart.forEach((item) => (count += item.qty));
+
+        let el = document.getElementById("cartCount");
+        if (el) {
+          el.innerText = count;
+        }
+      }
+
+      updateCartCount();
+
+      function goToCart() {
+        window.location.href = "cart.html";
+      }
+    </script>
+  </body>
+</html>

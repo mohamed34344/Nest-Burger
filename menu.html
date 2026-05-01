@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon_io (1)/favicon.ico" />
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Nest Burger</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="logoContent">
+          <img
+            class="logo"
+            src="image/NESTO (1).png"
+            alt="logo website"
+          />
+        </div>
+        <div class="links">
+          <a class="links__link" href="index.html">Home</a>
+          <a class="links__link" href="menu.html">Menu</a>
+          <a class="links__link" href="About.html">About</a>
+          <a class="links__link" href="Contact.html">Contact US</a>
+
+
+  <div class="cart-icon" onclick="goToCart()">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cartCount">0</span>
+          </div>
+
+          <button class="signin-btn" onclick="goToLogin()">Sign In</button>
+
+          <script>
+            function goToLogin() {
+              window.location.href = "login.html";
+            }
+          </script>
+        </div>
+      </header>
+      <!-- menu -->
+
+      <section class="menu">
+        <div class="menu__text">
+          <h2 class="menu__h2">Our Menu</h2>
+
+          <p class="menu__p">Explor our delicious selection</p>
+        </div>
+      </section>
+      <section>
+        <h2 class="All__items">All Items (20 items)</h2>
+
+        <div class="container1">
+          <!-- Card -->
+          <div class="card">
+            <div class="image">
+              <img
+                src="image/Screenshot 2026-04-23 194233.png"
+                alt=""
+              />
+              <span class="badge">Popular</span>
+            </div>
+            <div class="content">
+              <h3>DOUBLE BURGER</h3>
+              <p>
+                2 pieces of beef + cheddar slices + Nesto sauce 
+                
+              </p>
+              <div class="bottom">
+                <span class="price">170LE</span>
+               <button onclick="addToCart(this)">Add</button>
+              </div>
+            </div>
+          </div>
+
+
+ <div class="card">
+            <div class="image">
+              <img
+                src="/image/Screenshot 2026-04-23 194124.png"
+                alt=""
+              />
+              <span class="badge">Popular</span>
+            </div>
+            <div class="content">
+              <h3>GOLDEN CRISPY</h3>
+              <p>
+                fresh chicken breasts + cheddar sauce + Nesto sauce + mozzarella
+                sticks +
+              </p>
+              <div class="bottom">
+                <span class="price">140LE</span>
+               <button onclick="addToCart(this)">Add</button>
+              </div>
+            </div>
+          </div>
+
+
+ <div class="card">
+            <div class="image">
+              <img
+                src="image/Screenshot 2026-04-23 194158.png"
+                alt=""
+              />
+              <span class="badge">Popular</span>
+            </div>
+            <div class="content">
+              <h3>BACON BURGER</h3>
+              <p>
+                beef burger + beef bacon + Barbecue
+              </p>
+              <div class="bottom">
+                <span class="price">135LE</span>
+             <button onclick="addToCart(this)">Add</button>
+              </div>
+            </div>
+          </div>
+
+
+ <div class="card">
+            <div class="image">
+              <img
+                src="image/Screenshot 2026-04-23 194250.png"
+                alt=""
+              />
+
+            </div>
+            <div class="content">
+              <h3>VOLCANO BURGER</h3>
+              <p>
+                Beef burger stuffed with mozzarella + cheddar +  Nest sauce
+              </p>
+              <div class="bottom">
+                <span class="price">135LE</span>
+               <button onclick="addToCart(this)">Add</button>
+              </div>
+            </div>
+          </div>
+
+ <div class="card">
+            <div class="image">
+              <img
+                src="image/Screenshot 2026-04-23 194306.png"
+                alt=""
+              />
+
+            </div>
+            <div class="content">
+              <h3>GOLDEN BURGER</h3>
+              <p>
+               Beef burger + mozzarella
+                sticks + Nest sauce + cheddar
+              </p>
+              <div class="bottom">
+                <span class="price">135LE</span>
+            <button onclick="addToCart(this)">Add</button>
+              </div>
+            </div>
+          </div>
+
+
+<div class="card">
+            <div class="image">
+              <img
+                src="image/Daaboul cheese burger.jpg"
+                alt=""
+              />
+
+            </div>
+            <div class="content">
+              <h3>NEST BURGER</h3>
+              <p>
+                2 pieces of beef + cheddar slices + Nesto sauce + mozzarella
+                sticks + beef bacon
+              </p>
+              <div class="bottom">
+                <span class="price">195LE</span>
+              <button onclick="addToCart(this)">Add</button>
+              </div>
+            </div>
+          </div>
+  
+<div class="card">
+            <div class="image">
+              <img
+                src="image/Screenshot 2026-04-23 194218.png"
+                alt=""
+              />
+
+            </div>
+            <div class="content">
+              <h3>CRISPY RANCH</h3>
+              <p>
+             fresh chicken breasts + cheddar sauce + Ranch sauch
+              </p>
+              <div class="bottom">
+                <span class="price">130LE</span>
+            <button onclick="addToCart(this)">Add</button>
+              </div>
+            </div>
+          </div>
+
+
+<div class="card">
+            <div class="image">
+              <img
+                src="image/Screenshot 2026-04-25 130820.png"
+                alt=""
+              />
+
+            </div>
+            <div class="content">
+              <h3>OLD SCHOOL</h3>
+              <p>
+                 Beef burger + cheddar slices + Nesto sauce
+              </p>
+              <div class="bottom">
+                <span class="price">125LE</span>
+            <button onclick="addToCart(this)">Add</button>
+              </div>
+            </div>
+          </div>
+
+
+<div class="card">
+            <div class="image">
+              <img
+                src="image/Crispy Mozzarella Sticks 2026 _ Ultimate Cheese Pull Fast Food Snack Close-Up.jpg"
+                alt=""
+              />
+ <span class="badge">Popular</span>
+            </div>
+            <div class="content">
+              <h3>MOZZARELLA STICKS</h3>
+            <br>
+              <div class="bottom">
+                <span class="price">35LE</span>
+              <button onclick="addToCart(this)">Add</button>
+              </div>
+            </div>
+          </div>
+ 
+
+<div class="card">
+            <div class="image">
+              <img
+                src="image/The KFC Coleslaw Secret_ No Buttermilk Needed.jpg"
+                alt=""
+              />
+
+            </div>
+            <div class="content">
+              <h3>CLOSELOW</h3>
+            <br>
+              <div class="bottom">
+                <span class="price">25LE</span>
+          <button onclick="addToCart(this)">Add</button>
+              </div>
+            </div>
+          </div>
+
+
+<div class="card">
+            <div class="image">
+              <img
+                src="image/Download premium png of PNG Fries box mockup ketchup food about french fries mockup, png, paper, fries, and mockup 13812052.jpg"
+                alt=""
+              />
+
+            </div>
+            <div class="content">
+              <h3>FRIES</h3>
+             <br>
+              <div class="bottom">
+                <span class="price">30LE</span>
+              <button onclick="addToCart(this)">Add</button>
+              </div>
+            </div>
+          </div>
+
+
+
+<div class="card">
+            <div class="image">
+              <img
+                src="image/cola_zz.jpg"
+                alt=""
+              />
+
+            </div>
+            <div class="content">
+            <h3>V7COLA</h3>
+           <br>
+             
+              <div class="bottom">
+                <span class="price">25LE</span>
+              <button onclick="addToCart(this)">Add</button>
+              </div>
+            </div>
+          </div>
+
+          
+<div class="card">
+            <div class="image">
+              <img
+                src="image/Water.jpg"
+                alt=""
+              />
+
+            </div>
+            <div class="content">
+              <h3>WATER</h3>
+              <br>
+              <div class="bottom">
+                <span class="price">10LE</span>
+         <button onclick="addToCart(this)">Add</button>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+        </div>
+
+
+
+      <footer class="footer">
+        <div class="footer__content">
+          <!-- COL 1 -->
+          <div class="footer__col">
+            <h2>Nest Burger</h2>
+            <p>
+              Serving delicious food with love since 2019. Your satisfaction is
+              our priority.
+            </p>
+
+            <div class="social">
+              <a href="https://www.facebook.com/nestburgereg"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+
+              <a
+                href="https://www.instagram.com/nestburgereg?fbclid=IwY2xjawRetT1leHRuA2FlbQIxMABicmlkETFRQWN4d3VvRmhYd2dGQ2NJc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHhnYh9oYg4Qmd0EId7X0Z_3O1UnzCYoUSy2dfSEflBR_VuxQcuTI4bplLcEa_aem_mdWqXwZXkEq5YWrZVXVkdQ"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- COL 2 -->
+          <div class="footer__col">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="About.html">About Us</a></li>
+              <li><a href="Contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- COL 3 -->
+          <div class="footer__col">
+            <h3>Customer Service</h3>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Delivery Information</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+
+          <!-- COL 4 -->
+          <div class="footer__col4">
+            <h3>Contact Us</h3>
+            <p>
+              📍 Tala in front of Habash Pharmacy.<br />
+              Shebin, Paris Street
+            </p>
+            <p>📞 01015864098</p>
+            <p>✉ info@NEST BURGER.com</p>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p>© 2026 Nest Burger Restaurant. All rights reserved.</p>
+        </div>
+      </footer>
+
+<script>
+
+function addToCart(btn){
+  let card = btn.closest(".card");
+
+  let name = card.querySelector("h3").innerText;
+  let priceText = card.querySelector(".price").innerText;
+  let price = parseFloat(priceText.replace("LE",""));
+  let img = card.querySelector("img").src;
+  let desc = card.querySelector("p")?.innerText || "";
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  let existing = cart.find(item => item.name === name);
+
+  if(existing){
+    existing.qty += 1;
+  } else {
+    cart.push({
+      name: name,
+      price: price,
+      qty: 1,
+      img: img,
+      desc: desc
+    });
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert("Added to cart ✅");
+}
+
+
+
+function goToCart(){
+  window.location.href = "cart.html";
+}
+
+function updateCartCount(){
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  let count = 0;
+
+  cart.forEach(item => {
+    count += item.qty;
+  });
+
+  let badge = document.getElementById("cartCount");
+
+  if(badge){
+    badge.innerText = count;
+
+    if(count === 0){
+      badge.style.display = "none";
+    } else {
+      badge.style.display = "block";
+    }
+  }
+}
+
+function updateCartCount(){
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  let count = 0;
+  cart.forEach(item => count += item.qty);
+
+  let el = document.getElementById("cartCount");
+  if(el){
+    el.innerText = count;
+  }
+}
+
+
+updateCartCount();
+
+ function goToCart() {
+        window.location.href = "cart.html";
+      }
+
+
+
+</script>
+
+  </body>
+</html>
