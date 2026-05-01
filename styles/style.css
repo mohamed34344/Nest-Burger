@@ -180,7 +180,9 @@ body {
 }
 
 .All__items {
-  padding: 1rem 0 0 2rem;
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   font-size: 2rem;
 }
 
@@ -197,7 +199,7 @@ body {
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
-  margin-left: 1rem;
+  margin-left: 1.5rem;
 }
 
 .card:hover {
@@ -830,9 +832,6 @@ button:hover {
 /* 📱 Mobile */
 @media (max-width: 600px) {
   /* HEADER */
-  .logo {
-    margin-left: 6.5rem;
-  }
   .header .logoContent {
     margin: 1rem;
   }
