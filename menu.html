@@ -394,6 +394,9 @@
 
 <script>
 
+// =========================
+// ADD TO CART
+// =========================
 function addToCart(btn){
   let card = btn.closest(".card");
 
@@ -420,59 +423,43 @@ function addToCart(btn){
   }
 
   localStorage.setItem("cart", JSON.stringify(cart));
+
+  updateCartCount(); // مهم جداً
   alert("Added to cart ✅");
 }
 
-
-
+// =========================
+// GO TO CART
+// =========================
 function goToCart(){
   window.location.href = "cart.html";
 }
 
-function updateCartCount(){
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+// =========================
+// UPDATE CART COUNT (عدد المنتجات)
+// =========================
+ function updateCartCount() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  let count = 0;
+        let count = 0;
+        cart.forEach((item) => (count += item.qty));
 
-  cart.forEach(item => {
-    count += item.qty;
-  });
-
-  let badge = document.getElementById("cartCount");
-
-  if(badge){
-    badge.innerText = count;
-
-    if(count === 0){
-      badge.style.display = "none";
-    } else {
-      badge.style.display = "block";
-    }
-  }
-}
-
-function updateCartCount(){
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-  let count = 0;
-  cart.forEach(item => count += item.qty);
-
-  let el = document.getElementById("cartCount");
-  if(el){
-    el.innerText = count;
-  }
-}
-
-
-updateCartCount();
-
- function goToCart() {
-        window.location.href = "cart.html";
+        let el = document.getElementById("cartCount");
+        if (el) {
+          el.innerText = count;
+        }
       }
 
 
 
+// =========================
+// INIT
+// =========================
+updateCartCount();
+
 </script>
+
+
 
   </body>
 </html>

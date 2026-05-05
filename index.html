@@ -275,23 +275,13 @@
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
         let count = 0;
-        cart.forEach((item) => {
-          count += item.qty;
-        });
+        cart.forEach((item) => (count += item.qty));
 
-        let badge = document.getElementById("cartCount");
-
-        if (badge) {
-          badge.innerText = count;
-
-          if (count === 0) {
-            badge.style.display = "none";
-          } else {
-            badge.style.display = "block";
-          }
+        let el = document.getElementById("cartCount");
+        if (el) {
+          el.innerText = count;
         }
       }
-
       updateCartCount();
     </script>
   </body>
