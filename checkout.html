@@ -3,260 +3,271 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nest Burger</title>
- <link rel="icon" type="image/x-icon" href="favicon_io (1)/favicon.ico" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css" />
+    <script src="/checkout.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <title>Checkout</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        /* background: linear-gradient(135deg, #db871f, #000000bf); */
+
+        background: linear-gradient(-45deg, #ffffff, #ffa010, #e38112);
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 30px 20px;
+      }
+
+      .checkout {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+      }
+
+      .box {
+        background: #ffffff;
+        padding: 25px;
+        border-radius: 16px;
+        flex: 1;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        transition: 0.3s;
+      }
+
+      .box:hover {
+        transform: translateY(-3px);
+      }
+
+      h2 {
+        margin-bottom: 15px;
+        color: #1d1d1d;
+      }
+
+      h3 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        color: #444;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px;
+        margin-top: 8px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        transition: 0.3s;
+      }
+
+      input:focus {
+        border-color: #ff6600;
+        outline: none;
+        box-shadow: 0 0 5px rgba(255, 102, 0, 0.3);
+      }
+
+      .row {
+        display: flex;
+        gap: 10px;
+      }
+
+      /* PAYMENT */
+      .method-card {
+        display: block;
+        border: 1px solid #eee;
+        border-radius: 14px;
+        padding: 15px;
+        margin-top: 12px;
+        cursor: pointer;
+        transition: 0.3s;
+        background: #fafafa;
+      }
+
+      .method-card:hover {
+        border-color: #ff6600;
+        background: #fff3e6;
+      }
+
+      .method-card.active {
+        border: 2px solid #ff6600;
+        background: #fff3e6;
+      }
+
+      .method-header {
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .method-form {
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.4s;
+      }
+
+      .method-card.active .method-form {
+        max-height: 200px;
+        margin-top: 10px;
+      }
+
+      /* ORDER */
+      .order-item {
+        display: flex;
+        justify-content: space-between;
+        margin: 12px 0;
+        font-size: 15px;
+      }
+
+      hr {
+        margin: 20px 0;
+        border: none;
+        height: 1px;
+        background: #eee;
+      }
+
+      /* TOTAL */
+      h3 span {
+        color: #d62828;
+      }
+
+      /* BUTTON */
+      .button__place {
+        width: 100%;
+        padding: 14px;
+        margin-top: 25px;
+        background: linear-gradient(135deg, #ff6600, #ff8c42);
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        font-size: 17px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .button__place:hover {
+        transform: scale(1.03);
+        box-shadow: 0 8px 20px rgba(255, 102, 0, 0.4);
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 768px) {
+        .checkout {
+          flex-direction: column;
+        }
+      }
+    </style>
   </head>
 
   <body>
+    <header class="header">
+      <div class="logoContent">
+        <img class="logo" src="image/NESTO (1).png" alt="logo website" />
+      </div>
+      <div class="links">
+        <a class="links__link" href="index.html">Home</a>
+        <a class="links__link" href="menu.html">Menu</a>
+        <a class="links__link" href="About.html">About</a>
+        <a class="links__link" href="Contact.html">Contact US</a>
 
-    <div class="container">
-      <header class="header">
-        <div class="logoContent">
-          <img class="logo" src="image/NESTO (1).png" alt="logo website" />
+        <div class="cart-icon" onclick="goToCart()">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cartCount">0</span>
         </div>
-      
-        <div class="links" id="navLinks">
-          <a class="links__link" href="index.html">Home</a>
-          <a class="links__link" href="menu.html">Menu</a>
-          <a class="links__link" href="About.html">About</a>
-          <a class="links__link" href="Contact.html">Contact US</a>
 
+        <button class="signin-btn" onclick="goToLogin()">Sign In</button>
 
-            <div class="cart-icon" onclick="goToCart()">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span id="cartCount">0LE</span>
-          </div>
-
-          <button class="signin-btn" onclick="goToLogin()">Sign In</button>
-
-          <script>
-            function goToLogin() {
-              window.location.href = "login.html";
-            }
-          </script>
-        </div>
-      </header>
-    <div class="checkout-container">
-      <!-- LEFT -->
-      <div class="checkout-left">
-        <h2>Customer Info</h2>
-
-        <form id="checkoutForm">
-          <input type="text" placeholder="Name" required />
-          <input type="text" placeholder="Phone" required />
-          <input type="text" placeholder="Address" required />
-
-          <button type="submit" id="confirmBtn">Confirm Order</button>
-        </form>
-      </div>
-
-      <!-- RIGHT -->
-      <div class="checkout-right">
-        <h2>Order Summary</h2>
-        <div id="summaryItems"></div>
-
-        <hr />
-
-        <p>Subtotal: <span id="subtotal"></span></p>
-        <p>Delivery: <span id="delivery"></span></p>
-        <h3>Total: <span id="total"></span></h3>
-      </div>
-    </div>
-
-    <!-- PAYMENT MODAL -->
-   <div id="paymentModal" class="modal">
-  <div class="modal-box">
-
-    <span class="close-x" onclick="closeModal()">✕</span>
-
-    <div class="modal-header">
-      <div class="icon-circle">
-        <i class="fa-solid fa-credit-card"></i>
-      </div>
-      <h2>Payment Method</h2>
-      <p>Choose your preferred payment option</p>
-    </div>
-
-    <div class="methods">
-
-   <div class="method" onclick="selectMethod(this,'cash')">
-  <div class="left">
-  <img src="/image/cash on delivery.jpg" width="60">
-    <div>
-      <h4>Cash on Delivery</h4>
-      <span>Pay with cash upon delivery</span>
-    </div>
-  </div>
-  <i class="fa-solid fa-chevron-right"></i>
-</div>
-
-     <div class="method" onclick="selectMethod(this,'card')">
-  <div class="left">
-   <img src="/image/Credit Card.png" width="80">
-    <div>
-      <h4>Credit Card</h4>
-      <span>Pay securely with your card</span>
-    </div>
-  </div>
-  <i class="fa-solid fa-chevron-right"></i>
-</div>
-
-  <div class="method active" onclick="selectMethod(this,'vodafone')">
-  <div class="left">
-    <img src="image/vodafone.jpg" width="60">
-    <div>
-      <h4>Vodafone Cash</h4>
-      <span>Pay using Vodafone Cash</span>
-    </div>
-   
-  </div>
-   <i class="fa-solid fa-chevron-right"></i>
-</div>
-
-    <div id="paymentForm"></div>
-
-    <button class="confirm-btn">Confirm Payment</button>
-
-    <div class="divider">or</div>
-
-    <button class="cancel" onclick="closeModal()">✖ Cancel</button>
-
-  </div>
-</div>
-
-    <script>
-      // ================= CART =================
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
-      let selectedMethod = "";
-
-      // ================= RENDER =================
-      function renderSummary() {
-        let container = document.getElementById("summaryItems");
-        container.innerHTML = "";
-
-        let subtotal = 0;
-
-        cart.forEach((item, index) => {
-          let total = item.price * item.qty;
-          subtotal += total;
-container.innerHTML += `
-  <div class="order-item">
-
-    <div style="display:flex; gap:10px; align-items:center;">
-
-      <img src="${item.img}" 
-           style="width:50px;height:50px;border-radius:8px;object-fit:cover;" />
-
-      <div>
-        <div>${item.name}</div>
-        <small>Qty: ${item.qty}</small>
-      </div>
-
-    </div>
-
-    <span>${total} LE</span>
-
-  </div>
-`;
-    
-        });
-
-        let delivery = subtotal > 0 ? 80 : 0;
-        let final = subtotal + delivery;
-
-        document.getElementById("subtotal").innerText = subtotal + " LE";
-        document.getElementById("delivery").innerText = delivery + " LE";
-        document.getElementById("total").innerText = final + " LE";
-      }
-
-      // ================= PAYMENT STEP 1 =================
-      document
-        .getElementById("checkoutForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          if (cart.length === 0) {
-            alert("Cart is empty ❌");
-            return;
+        <script>
+          function goToLogin() {
+            window.location.href = "login.html";
           }
+        </script>
+      </div>
+    </header>
+    <div class="container">
+      <div class="checkout">
+        <!-- LEFT -->
+        <div class="box">
+          <form id="checkoutForm">
+            <h2>Checkout</h2>
 
-          document.getElementById("paymentModal").style.display = "flex";
-        });
+            <h3>Customer Info</h3>
+            <input type="text" placeholder="Full Name" required />
+            <input type="text" placeholder="Phone Number" required />
+            <input type="text" placeholder="Address" required />
 
-      // ================= SELECT METHOD =================
-   function selectMethod(element, method){
+            <h3>Payment Method</h3>
 
-  selectedMethod = method;
+            <!-- CARD -->
+            <label class="method-card">
+              <input
+                type="radio"
+                name="payment"
+                value="card"
+                onchange="selectMethod('card')"
+              />
+              <div class="method-header">💳 Credit Card</div>
 
-  // remove active
-  document.querySelectorAll(".method").forEach(m => m.classList.remove("active"));
+              <div class="method-form">
+                <input type="text" placeholder="Card Number" />
+                <div class="row">
+                  <input type="text" placeholder="MM/YY" />
+                  <input type="text" placeholder="CVV" />
+                </div>
+              </div>
+            </label>
 
-  // add active
-  element.classList.add("active");
+            <!-- VODAFONE -->
+            <label class="method-card">
+              <input
+                type="radio"
+                name="payment"
+                value="vodafone"
+                onchange="selectMethod('vodafone')"
+              />
+              <div class="method-header">📱 Vodafone Cash</div>
 
-  let form = document.getElementById("paymentForm");
+              <div class="method-form">
+                <input type="text" placeholder="Phone Number" />
+                <input type="text" placeholder="Transaction Code" />
+              </div>
+            </label>
 
-  if(method === "vodafone"){
-    form.innerHTML = `
-      <input type="text" placeholder="Vodafone Cash Number">
-      <input type="text" placeholder="Transfer Code">
-    `;
-  }
+            <!-- CASH -->
+            <label class="method-card">
+              <input
+                type="radio"
+                name="payment"
+                value="cash"
+                onchange="selectMethod('cash')"
+              />
+              <div class="method-header">💵 Cash on Delivery</div>
 
-  else if(method === "card"){
-    form.innerHTML = `
-      <input type="text" placeholder="Card Number">
-      <input type="text" placeholder="Name on Card">
-      <input type="text" placeholder="Expiry Date">
-      <input type="text" placeholder="CVV">
-    `;
-  }
+              <div class="method-form">
+                <p>Pay when your order arrives 🚚</p>
+              </div>
+            </label>
 
-  else{
-    form.innerHTML = "";
-  }
-}
-    // ================= PAY =================
-      function pay() {
-        let btn = document.getElementById("confirmBtn");
-        btn.innerText = "Processing...";
-        btn.disabled = true;
+            <button class="button__place" type="submit">Place Order</button>
+          </form>
+        </div>
 
-        setTimeout(() => {
-          alert("Order placed using: " + selectedMethod);
+        <!-- RIGHT (ORDER SUMMARY) -->
+        <div class="box">
+          <h2>Your Order</h2>
 
-          localStorage.removeItem("cart");
-          cart = [];
+          <div id="summaryItems"></div>
 
-          updateCartCount();
+          <hr />
 
-          window.location.href = "index.html";
-        }, 1000);
-      }
-
-      // ================= CLOSE MODAL =================
-      function closeModal() {
-        document.getElementById("paymentModal").style.display = "none";
-        document.getElementById("paymentForm").innerHTML = "";
-        selectedMethod = "";
-      }
-
-      // ================= CART COUNT =================
-      function updateCartCount() {
-        let total = 0;
-        cart.forEach((i) => (total += i.qty));
-        document.getElementById("cartCount").innerText = total;
-      }
-
-      // ================= INIT =================
-      renderSummary();
-      updateCartCount();
-
-         function goToCart() {
-        window.location.href = "cart.html";
-      }
-    </script>
+          <p>Subtotal: <span id="subtotal">0</span> LE</p>
+          <p>Delivery: <span id="delivery">0</span> LE</p>
+          <h3>Total: <span id="total">0</span> LE</h3>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

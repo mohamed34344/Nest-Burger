@@ -9,6 +9,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <link rel="stylesheet" href="styles/style.css" />
+    <script src="/menu.js" defer></script>
+    <script src="/main.js" defer></script>
     <title>Nest Burger</title>
   </head>
   <body>
@@ -392,72 +394,7 @@
         </div>
       </footer>
 
-<script>
 
-// =========================
-// ADD TO CART
-// =========================
-function addToCart(btn){
-  let card = btn.closest(".card");
-
-  let name = card.querySelector("h3").innerText;
-  let priceText = card.querySelector(".price").innerText;
-  let price = parseFloat(priceText.replace("LE",""));
-  let img = card.querySelector("img").src;
-  let desc = card.querySelector("p")?.innerText || "";
-
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-  let existing = cart.find(item => item.name === name);
-
-  if(existing){
-    existing.qty += 1;
-  } else {
-    cart.push({
-      name: name,
-      price: price,
-      qty: 1,
-      img: img,
-      desc: desc
-    });
-  }
-
-  localStorage.setItem("cart", JSON.stringify(cart));
-
-  updateCartCount(); // مهم جداً
-  alert("Added to cart ✅");
-}
-
-// =========================
-// GO TO CART
-// =========================
-function goToCart(){
-  window.location.href = "cart.html";
-}
-
-// =========================
-// UPDATE CART COUNT (عدد المنتجات)
-// =========================
- function updateCartCount() {
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-        let count = 0;
-        cart.forEach((item) => (count += item.qty));
-
-        let el = document.getElementById("cartCount");
-        if (el) {
-          el.innerText = count;
-        }
-      }
-
-
-
-// =========================
-// INIT
-// =========================
-updateCartCount();
-
-</script>
 
 
 

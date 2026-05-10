@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="favicon_io (1)/favicon.ico" />
     <link rel="stylesheet" href="styles/style.css" />
+    <script src="/main.js" defer></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -143,7 +144,7 @@
           </div>
         </div>
         <div class="View__menu">
-          <a href="order.html" class="popular__link"
+          <a href="menu.html" class="popular__link"
             >View Full menu <span class="arrow__menu">→</span></a
           >
         </div>
@@ -234,55 +235,5 @@
         </div>
       </footer>
     </div>
-
-    <script>
-      function addToCart(btn) {
-        let card = btn.closest(".card");
-
-        let name = card.querySelector("h3").innerText;
-        let priceText = card.querySelector(".price").innerText;
-        let price = parseFloat(priceText.replace("LE", "").replace("$", ""));
-        let img = card.querySelector("img").src;
-        let desc = card.querySelector("p")?.innerText || "";
-
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-        let existing = cart.find((item) => item.name === name);
-
-        if (existing) {
-          existing.qty += 1;
-        } else {
-          cart.push({
-            name: name,
-            price: price,
-            qty: 1,
-            img: img,
-            desc: desc,
-          });
-        }
-
-        localStorage.setItem("cart", JSON.stringify(cart));
-
-        updateCartCount();
-        alert("Added to cart ✅");
-      }
-
-      function goToCart() {
-        window.location.href = "cart.html";
-      }
-
-      function updateCartCount() {
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-        let count = 0;
-        cart.forEach((item) => (count += item.qty));
-
-        let el = document.getElementById("cartCount");
-        if (el) {
-          el.innerText = count;
-        }
-      }
-      updateCartCount();
-    </script>
   </body>
 </html>

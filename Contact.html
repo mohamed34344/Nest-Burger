@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <script src="/main.js" defer></script>
     <title>Nest Burger</title>
   </head>
   <body>
@@ -189,24 +190,5 @@
 
     </div>
 
-
-    <script>
-   function updateCartCount(){
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-  let count = 0;
-  cart.forEach(item => count += item.qty);
-
-  let el = document.getElementById("cartCount");
-  if(el){
-    el.innerText = count;
-  }
-}
-
-updateCartCount();
-function goToCart() {
-  window.location.href = "cart.html";
-}
-  </script>
   </body>
 </html>

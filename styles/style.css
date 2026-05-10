@@ -1,8 +1,9 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 * {
   margin: 0;
   padding: 0;
-  font: inherit;
+  font-family: "Rubik", sans-serif;
 }
 
 *,
@@ -31,6 +32,10 @@ button {
 ul,
 ol {
   list-style: none;
+}
+
+html {
+  font-size: 95%; /* desktop */
 }
 
 body {
@@ -74,10 +79,10 @@ body {
 .signin-btn {
   background-color: #000000;
   color: rgb(255, 255, 255);
-  padding: 10px 20px;
+  padding: 0.5rem 1rem;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1.2rem;
   transition: 0.3s;
 }
 
@@ -170,7 +175,7 @@ body {
 }
 
 .menu__h2 {
-  font-size: 5rem;
+  font-size: 4rem;
   padding: 0.5rem 0;
   color: #ffffff;
 }
@@ -195,9 +200,9 @@ body {
 .card {
   width: 90%;
   background: white;
-  border-radius: 20px;
+  border-radius: 2rem;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
   transition: 0.3s;
   margin-left: 1.5rem;
 }
@@ -212,23 +217,23 @@ body {
 
 .image img {
   width: 100%;
-  height: 180px;
+  height: 18rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .badge {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 1rem;
+  right: 1rem;
   background: #da4607;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 12px;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 1.2rem;
 }
 
 .content {
-  padding: 15px;
+  padding: 1.5rem;
 }
 
 .content h3 {
@@ -238,7 +243,7 @@ body {
 .content p {
   font-size: 14px;
   color: gray;
-  margin: 10px 0;
+  margin: 1rem 0;
 }
 
 .bottom {
@@ -256,11 +261,14 @@ body {
 button {
   background: rgb(15, 15, 15);
   border: none;
-  padding: 8px 15px;
-  border-radius: 10px;
+  padding: 0.8rem 1.5rem;
+  border-radius: 1rem;
   cursor: pointer;
   color: white;
   font-weight: bold;
+}
+button:hover {
+  background-color: #f1d81b;
 }
 
 .popular__content {
@@ -320,13 +328,13 @@ button {
 .story__h2 {
   margin-top: 1rem;
   margin-bottom: 2rem;
-  font-size: 4rem;
+  font-size: 3rem;
   color: #090909;
 }
 
 .story__p {
   font-size: 1.5rem;
-  color: #000000;
+  color: #786848;
   line-height: 2rem;
   margin-bottom: 1rem;
 }
@@ -347,13 +355,13 @@ button {
 }
 
 .about__h2 {
-  font-size: 6rem;
+  font-size: 4rem;
   color: #ffffff;
   margin-top: 1rem;
 }
 
 .about__p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #555;
   margin-bottom: 2rem;
   margin-top: 1rem;
@@ -374,12 +382,12 @@ button {
 }
 
 .About__story__h2 {
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 1.5rem;
 }
 
 .About__story__p {
-  line-height: 3rem;
+  line-height: 2.5rem;
   margin-bottom: 1.5rem;
   color: #555;
 }
@@ -558,12 +566,12 @@ button {
   margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  gap: 3rem;
 }
 
 .footer__col h2,
 .footer__col h3 {
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
 }
 
 .footer__col p {
@@ -624,7 +632,7 @@ button {
 }
 
 .social a:hover {
-  background: #ffd27f;
+  background: #b6b632;
   color: #000;
 }
 
@@ -655,8 +663,8 @@ button {
 .cart-right {
   flex: 1;
   background: #fff;
-  padding: 20px;
-  border-radius: 15px;
+  padding: 2rem;
+  border-radius: 1.5rem;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -675,23 +683,23 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px;
+  padding: 1.5rem;
   border: 1px solid #eee;
-  border-radius: 12px;
-  margin-top: 15px;
+  border-radius: 1.2rem;
+  margin-top: 1.5rem;
 }
 
 .item img {
-  width: 80px;
-  height: 80px;
-  border-radius: 10px;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 1rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .info {
   flex: 1;
-  margin-left: 15px;
+  margin-left: 1.5rem;
 }
 
 .price {
@@ -702,7 +710,7 @@ button {
 .qty {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 1rem;
 }
 
 .qty button {
@@ -743,15 +751,14 @@ button {
 .cart-icon {
   position: relative;
   cursor: pointer;
-  font-size: 22px;
-  margin-left: 15px;
+  margin-left: 1.5rem;
 }
 
 .checkout-container {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  padding: 60px 20px;
+  gap: 4rem;
+  padding: 6rem 2rem;
   background: #f5f5f5;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -760,9 +767,9 @@ button {
 /* الكروت */
 .checkout-left {
   background: #fff;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.08);
   transition: 0.3s;
   width: 400px;
   max-height: 500px;
@@ -772,9 +779,9 @@ button {
 .checkout-right {
   width: 400px;
   background: #fff;
-  padding: 25px;
+  padding: 2.5rem;
   border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.08);
   transition: 0.3s;
 }
 
@@ -799,7 +806,7 @@ button {
   padding: 12px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  font-size: 15px;
+  font-size: 1.4rem;
   transition: 0.3s;
 }
 
@@ -812,13 +819,13 @@ button {
 /* الزرار */
 .checkout-left button {
   width: 100%;
-  padding: 14px;
-  margin-top: 10px;
+  padding: 1.4rem;
+  margin-top: 1rem;
   background: #000;
   color: #fff;
   border: none;
-  border-radius: 8px;
-  font-size: 16px;
+  border-radius: 0.8rem;
+  font-size: 1.6rem;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -843,14 +850,14 @@ button {
 .checkout-right h3 {
   display: flex;
   justify-content: space-between;
-  margin: 10px 0;
-  font-size: 15px;
+  margin: 1rem 0;
+  font-size: 1.5rem;
 }
 
 .checkout-right hr {
   border: none;
-  border-top: 1px solid #eee;
-  margin: 15px 0;
+  border-top: 0.1rem solid #eee;
+  margin: 1.5rem 0;
 }
 
 .checkout-right h3 {
@@ -862,13 +869,13 @@ button {
 .item-left {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 1.2rem;
 }
 
 .item-img {
-  width: 60px;
-  height: 60px;
-  border-radius: 10px;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 1rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -880,166 +887,60 @@ button {
   align-items: center;
 }
 
-/* ===== MODAL OVERLAY ===== */
-.modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  backdrop-filter: blur(4px);
-}
-
-.modal-box {
-  width: 400px;
-  background: #fff;
-  border-radius: 20px;
-  padding: 25px;
-  position: relative;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-  max-height: 90vh;
-  overflow-y: auto;
-}
-
-/* close button */
-.close-x {
-  position: absolute;
-  right: 15px;
-  top: 15px;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-/* header */
-.modal-header {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-/* methods */
-.methods {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.method {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px;
-  border-radius: 12px;
-  border: 1px solid #eee;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.method:hover {
-  background: #f9f9f9;
-}
-
-.method .left {
-  display: flex;
-  gap: 5px;
-  align-items: center;
-}
-
-.method h4 {
-  margin: 0;
-  font-size: 12px;
-}
-
-.method span {
-  font-size: 10px;
-  color: #777;
-}
-
-/* active */
-/* inputs */
-#paymentForm input {
-  width: 100%;
-  padding: 12px;
-  margin-top: 2px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-}
-
-/* confirm */
-.confirm-btn {
-  width: 100%;
-  border-radius: 12px;
-  border: none;
-  background: black;
-  color: white;
-  cursor: pointer;
-}
-
-/* divider */
-.divider {
-  text-align: center;
-  color: #999;
-}
-
-/* cancel */
-.cancel {
-  width: 100%;
-  border: none;
-  background: none;
-  color: red;
-  cursor: pointer;
-}
-
 /* ========================= */
-/* 🔥 RESPONSIVE FIX START */
+/* 📱 Mobile (max-width: 768px) */
 /* ========================= */
-/* 📱 Tablets */
-@media (max-width: 992px) {
+@media (max-width: 48rem) {
+  html {
+    font-size: 75%;
+  }
+  .logo {
+    margin-left: 4.5rem;
+  }
   /* HEADER */
   .header {
-    flex-wrap: wrap;
+    flex-direction: column;
   }
-  .header .links {
+  .links {
     flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
-    margin: 1rem 0;
   }
-  /* HOME */
+  .signin-btn {
+    margin-bottom: 0.2rem;
+  }
+  /* HERO */
   .text1 {
     flex-direction: column;
     text-align: center;
   }
-  .column1,
-  .column2 {
-    width: 100%;
-  }
   .pargraph {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
-  /* CARDS */
-  .card {
-    margin-left: 0.5rem;
+  .desc {
+    max-width: 100%;
   }
+  .buttons {
+    justify-content: center;
+  }
+  /* MENU */
   .container1 {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
   /* STORY */
   .story {
     grid-template-columns: 1fr;
-    text-align: center;
   }
   .story__img {
-    width: 80%;
-    margin: auto;
+    width: 100%;
+    margin: 0;
   }
   /* ABOUT */
   .About__story {
     grid-template-columns: 1fr;
     text-align: center;
   }
-  .About__story__content {
-    margin: auto;
+  .About__story__num {
+    grid-template-columns: 1fr;
   }
   /* CONTACT */
   .contact__content {
@@ -1047,72 +948,6 @@ button {
   }
   .contact__form {
     margin-left: 0;
-  }
-  /* FOOTER */
-  .footer__content {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  /* CART */
-  .cart-container {
-    flex-direction: column;
-  }
-}
-/* 📱 Mobile */
-@media (max-width: 600px) {
-  /* HEADER */
-  .header .logoContent {
-    margin: 1rem;
-  }
-  .header .links {
-    gap: 1rem;
-    font-size: 1rem;
-  }
-  .buttons {
-    margin-left: 4rem;
-  }
-  /* HERO TEXT */
-  .pargraph {
-    font-size: 2rem;
-  }
-  .desc {
-    font-size: 1rem;
-  }
-  /* CARDS */
-  .container1 {
-    grid-template-columns: 1fr;
-  }
-  .card {
-    margin-left: 2rem;
-  }
-  /* MENU TITLE */
-  .menu__h2 {
-    font-size: 3rem;
-  }
-  /* ABOUT */
-  .about__h2 {
-    font-size: 3rem;
-  }
-  .About__story__h2 {
-    font-size: 1.5rem;
-  }
-  .About__story__p {
-    line-height: 2rem;
-  }
-  .story__h2 {
-    padding-right: 2.5rem;
-  }
-  .story__p {
-    padding-right: 2.5rem;
-  }
-  .popular__link {
-    margin-right: 2rem;
-  }
-  /* VALUES */
-  .values__title {
-    font-size: 2.5rem;
-  }
-  /* CONTACT */
-  .contact__form {
     padding: 2rem;
   }
   /* FOOTER */
@@ -1120,29 +955,78 @@ button {
     grid-template-columns: 1fr;
     text-align: center;
   }
-  /* CART ITEMS */
+  /* CART */
+  .cart-container {
+    flex-direction: column;
+  }
   .item {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    gap: 1rem;
+    text-align: center;
   }
-  .item img {
+  /* CHECKOUT */
+  .checkout-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .checkout-left,
+  .checkout-right {
     width: 100%;
-    height: auto;
   }
-}
-/* 📱 Small phones */
-@media (max-width: 400px) {
-  .pargraph {
-    font-size: 1.7rem;
+  .image {
+    height: 40rem; /* مساحة أكبر للصورة */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff; /* فراغ خفيف */
+    border-radius: 1.5rem 1.5rem 0 0;
   }
-  .menu__h2 {
-    font-size: 2.5rem;
+  .container1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .image img {
+    border-radius: 2rem;
+    width: 95%;
+    height: 80%;
   }
   .card {
-    margin-left: 0.5rem;
+    margin-right: 1.5rem;
+    width: 90%;
   }
-  .about__h2 {
-    font-size: 2.5rem;
+}
+/* ========================= */
+/* 📲 Tablet (768px - 1024px) */
+/* ========================= */
+@media (min-width: 48rem) and (max-width: 64rem) {
+  html {
+    font-size: 62.5%; /* 1rem = 10px */
+  }
+  /* MENU */
+  .container1 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* STORY */
+  .story {
+    grid-template-columns: 1fr;
+  }
+  /* ABOUT */
+  .About__story {
+    grid-template-columns: 1fr;
+  }
+  /* CONTACT */
+  .contact__content {
+    grid-template-columns: 1fr;
+  }
+  /* FOOTER */
+  .footer__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* CHECKOUT */
+  .checkout-left,
+  .checkout-right {
+    width: 90%;
   }
 }/*# sourceMappingURL=style.css.map */
