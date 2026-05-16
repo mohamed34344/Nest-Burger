@@ -907,10 +907,14 @@ button {
   .links {
     flex-wrap: wrap;
     justify-content: center;
+    margin-left: 4rem;
   }
+  // .links a:first-child {
+  //   margin-left: 2rem;
+  // }
 
   .signin-btn {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.4rem;
   }
   /* HERO */
   .text1 {

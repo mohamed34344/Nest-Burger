@@ -904,9 +904,10 @@ button:hover {
   .links {
     flex-wrap: wrap;
     justify-content: center;
+    margin-left: 4rem;
   }
   .signin-btn {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.4rem;
   }
   /* HERO */
   .text1 {
